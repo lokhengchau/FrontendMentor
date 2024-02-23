@@ -11,14 +11,10 @@
     --d-charcoal: hsl(24, 5%, 18%);
 }
 
-.outfit {
-    font-family: "Outfit", sans-serif;
-    font-optical-sizing: auto;
-}
-
 .young-serif {
     font-family: "Young Serif", serif;
 }
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -28,4 +24,50 @@
 html {
     font-size: 16px;
     font-weight: 400;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    color: var(--wenge-brown);
+}
+
+body {
+    background-color: var(--eggshell);
+}
+
+.main-wrapper {
+    background-color: var(--white);
+    margin: 80px auto;
+    width: 800px;
+    border-radius: 20px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.banner-image {
+    width: 100%;
+    border-radius: 10px;
+}
+
+h1 {
+    color: var(--d-charcoal);
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+h2 {
+    color: var(--nutmeg);
+}
+
+ol,
+ul {
+    list-style-position: inside;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+li span,
+ul span{
+    margin-left: 20px;
 }
