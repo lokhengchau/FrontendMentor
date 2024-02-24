@@ -6,10 +6,6 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="./style.css">
   <title>Frontend Mentor | Recipe page</title>
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
   <div class="main-wrapper">
@@ -18,7 +14,7 @@
       <h1 class="young-serif">Simple Omelette Recipe</h1>
       <p>An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked to perfection, optionally filled with your choice of cheese, vegetables, or meats.</p>
     </header>
-    <section>
+    <section class="intro">
       <h2 class="young-serif">Preparation time</h2>
       <ul>
         <li><span><strong>Total:</strong> Approximately 10 minutes</span></li>
@@ -57,21 +53,21 @@
       <h2 class="young-serif">Nutrition</h2>
       <p>The table below shows nutritional values per serving without the additional fillings.</p>
       <table>
-        <tr>
-          <td>Calories</td>
-          <td>277kcal</td>
+        <tr class="bottom-border">
+          <td class="type">Calories</td>
+          <td class="value">277kcal</td>
+        </tr>
+        <tr class="bottom-border">
+          <td class="type">Carbs</td>
+          <td class="value">0g</td>
+        </tr>
+        <tr class="bottom-border">
+          <td class="type">Protein</td>
+          <td class="value">20g</td>
         </tr>
         <tr>
-          <td>Carbs</td>
-          <td>0g</td>
-        </tr>
-        <tr>
-          <td>Protein</td>
-          <td>20g</td>
-        </tr>
-        <tr>
-          <td>Fat</td>
-          <td>22g</td>
+          <td class="type">Fat</td>
+          <td class="value">22g</td>
         </tr>
       </table>
     </section>
