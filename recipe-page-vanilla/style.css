@@ -41,7 +41,7 @@ body {
     padding: 40px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
 }
 
 .banner-image {
@@ -53,6 +53,7 @@ h1 {
     color: var(--d-charcoal);
     letter-spacing: 2px;
     font-weight: 600;
+    margin: 10px 0;
 }
 
 h2 {
@@ -74,6 +75,7 @@ section.intro {
 
 section.intro h2 {
     color: var(--d-raspberry);
+    font-size: 1.2em
 }
 
 section li::marker {
@@ -113,6 +115,11 @@ li span{
     line-height: 140%;
 }
 
+ul li span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
 li::marker {
     color: var(--nutmeg);
 }
@@ -149,4 +156,23 @@ td.value {
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 800px) {
+    .main-wrapper {
+        margin: 0;
+        padding: 0 0 20px 0;
+        border-radius: 0px;
+        width: 100%
+    }
+
+    .banner-image {
+        border-radius: 0px;
+    }
+
+    header,
+    section,
+    hr {
+        margin: 0 20px;
+    }
 }
