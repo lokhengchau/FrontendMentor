@@ -21,3 +21,61 @@ html {
     font-size: 15px;
 }
 
+body {
+    background-color: var(--l-gray);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.qr-code-card-container {
+    background-color: var(--white);
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 400px;
+    text-align: center;
+}
+
+.qr-code-image {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.qr-code-title {
+    color: var(--d-blue);
+    margin: 0 5px;
+}
+
+.qr-code-description {
+    color: var(--grayish-blue);
+    margin-bottom: 20px;
+    margin: 0 5px 20px;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 420px) {
+    .qr-code-card-container {
+        width: 90%;
+    }
+
+    .qr-code-title {
+        font-size: 7.143vw;
+    }
+}
