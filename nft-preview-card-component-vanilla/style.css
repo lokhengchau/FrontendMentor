@@ -22,3 +22,158 @@ html {
     font-style: normal;
     font-size: 18px;
 }
+
+body {
+    background-color: var(--main-bg);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.preview-card-container {
+    width: 400px;
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card-image {
+    position: relative;
+    background-image: url('./images/image-equilibrium.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 100%;
+    aspect-ratio: 1 /1;
+    border-radius: 10px;
+    position: relative;
+}
+
+.card-image:hover {
+    cursor: pointer;
+    background-color: var(--cyan);
+}
+
+.card-image:hover::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--cyan);
+    border-radius: 10px;
+    opacity: .4;
+}
+
+.card-image:hover::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: url('./images/icon-view.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+}
+
+.card-title {
+    color: var(--white)
+}
+
+.card-description {
+    color: var(--soft-blue)
+}
+
+.card-attri-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.coin-amount-div,
+.time-remaining-div {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.coin-amount-div img {
+    width: 10px;
+    height: 20px
+}
+
+.time-remaining-div img{
+    width: 20px;
+    height: 20px
+}
+
+.coin-amount-div {
+    color: var(--cyan)
+}
+
+.time-remaining-div {
+    color: var(--soft-blue);
+}
+
+.card-title:hover,
+.author-name:hover  {
+    cursor: pointer;
+    color: var(--cyan);
+}
+
+hr {
+    border: 1px solid var(--line);
+}
+
+footer {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    color: var(--soft-blue)
+}
+
+.author-avatar {
+    width: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--soft-blue);
+}
+
+.author-name {
+    color: var(--white)
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    color: var(--white)
+}
+
+.attribution a {
+    color: var(--soft-blue);
+}
+
+@media screen and (max-width: 425px) {
+    html {
+        font-size: 4.235vw;
+    }
+    
+    .preview-card-container {
+        width: 90%;
+    }
+}
