@@ -17,8 +17,135 @@ html {
     font-size: 18px;
     font-family: "Kumbh Sans", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 700;
+    font-weight: 400;
     font-style: normal;
     font-variation-settings:
       "YOPQ" 300;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: var(--d-cyan);
+}
+
+.pattern-top {
+    width: 50vw;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: url('./images/bg-pattern-top.svg');
+    background-repeat: no-repeat;
+    background-position: right -60vh;
+    background-size: cover;
+    z-index: -1;
+}
+
+.pattern-bottom {
+    width: 50vw;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-image: url('./images/bg-pattern-bottom.svg');
+    background-repeat: no-repeat;
+    background-position: left 60vh;
+    background-size: cover;
+    z-index: -1;
+}
+
+.profile-card-container {
+    width: 450px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.card-background {
+    width: 100%;
+    height: 170px;
+    background-image: url('./images/bg-pattern-card.svg');
+    border-radius: 20px 20px 0 0;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-avatar {
+    width: 130px;
+    border-radius: 50%;
+    border: 5px solid white;
+    position: relative;
+    top: -66px;
+    margin-bottom: -40px;
+}
+
+.profile-name {
+    font-weight: 700;;
+}
+
+.profile-name,
+.profile-age {
+    font-size: 1.3rem;
+}
+
+.profile-age,
+.profile-location {
+    color: var(--d-grayish-blue);
+}
+
+hr {
+    margin: 30px 0;
+    border: none;
+    height: 1px;
+    background-color: var(--dark-gray);
+}
+
+.stats-row {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 25px 30px 25px;
+}
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.number {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.stats-type {
+    color: var(--dark-gray);
+    font-size: .8rem;
+    letter-spacing: 2px;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 470px) {
+    .profile-card-container {
+        width: 90%
+    }
 }
