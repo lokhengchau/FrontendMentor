@@ -14,20 +14,137 @@
     padding: 0;
 }
 
-.big-shoulders {
-  font-family: "Big Shoulders Display", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.lexend-deca{
-  font-family: "Lexend Deca", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-
 html {
     font-size: 15px;
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--v-l-gray);
+}
+
+.preview-card-container {
+    display: flex;
+    width: 1100px;
+    margin-top: 35px;
+    border-radius: 20px;
+}
+
+.review-card {
+    flex: 1;
+    color: var(--para-color);
+    padding: 55px 60px 55px 55px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.review-card:nth-child(1) {
+    border-radius: 20px 0 0 20px;
+}
+
+.review-card:nth-child(3) {
+    border-radius: 0 20px 20px 0;
+}
+
+.car-icon {
+    width: 80px;
+}
+
+.car-title {
+    font-size: 3.1rem;
+    font-family: "Big Shoulders Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+.car-description {
+    line-height: 180%;
+    font-size: 1.20rem;
+}
+
+.car-page-link {
+    background-color: var(--v-l-gray);
+    display: inline;
+    text-decoration: none;
+    width: fit-content;
+    padding: 20px 40px;
+    text-align: center;
+    font-size: 1.15rem;
+    border-radius: 50px;
+    margin-top: 45px;
+}
+
+#sedan {
+    background-color: var(--b-orange);
+}
+
+#sedan .car-page-link {
+    color: var(--b-orange);
+}
+
+#suvs {
+    background-color: var(--d-cyan);
+}
+
+#suvs .car-page-link {
+    color: var(--d-cyan);
+}
+
+#luxury {
+    background-color: var(--v-d-cyan);
+}
+
+#luxury .car-page-link {
+    color: var(--v-d-cyan);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 1140px) {
+    .preview-card-container {
+        width: calc(100vw - 40px);
+    }
+}
+
+@media screen and (max-width: 920px) {
+    body {
+        min-height: initial;
+    }
+    .preview-card-container {
+        flex-direction: column;
+        margin: 35px 0;
+    }
+
+    .review-card:nth-child(1) {
+        border-radius: 20px 20px 0 0;
+    }
+
+    .review-card:nth-child(3) {
+        border-radius: 0 0 20px 20px;
+    }
+
+    .car-page-link {
+        margin-top: 0px;
+    }
 }
