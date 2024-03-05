@@ -16,14 +16,98 @@
 }
 
 html {
-    font-size: 15px;
+    font-size: min(15px,1.042vw);
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
-.lexend-deca {
-  font-family: "Lexend Deca", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+body {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-bg);
+}
+
+.stats-preview-card {
+    width: 73%;
+    display: flex;
+    border-radius: 10px;
+}
+
+.card-content {
+    width: 51%;
+    background-color: var(--card-bg);
+    border-radius: 10px 0 0 10px;
+    padding: 6.6%;
+    padding-right: 8%;
+}
+
+.card-title,
+.stats-value {
+    color: var(--white);
+}
+
+.card-title {
+    font-size: 2.3rem;
+}
+
+.accent {
+    color: var(--accent);
+}
+
+.card-paragraph {
+    color: var(--white75);
+    margin: min(30px, 2.08vw) 4% min(60px, 5.55vw) 0;
+    line-height: 180%;
+    font-size: max(1.2rem, 13px);
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 18%;
+}
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.stats-value {
+    font-size: 1.5rem;
+}
+.stats-unit {
+    color: var(--white60);
+    text-transform: uppercase;
+    font-size: max(1rem, 12px);
+}
+
+.card-image {
+    width: 49%;
+    background-image: url('./images/image-header-desktop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-radius: 0 10px 10px 0;
+}
+
+.card-image::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background-color: var(--accent);
+    opacity: .4;
+    border-radius: 0 10px 10px 0;
 }
 
 .inter {
@@ -38,8 +122,72 @@ html {
 .attribution { 
     font-size: 11px;
     text-align: center;
+    position: absolute;
+    bottom: 0;
+    color: var(--white);
 }
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 1024px) {
+    .stats-preview-card {
+        width: min(747px, 100vw - 30px);
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    html {
+        font-size: 15px;
+    }
+
+    .stats-preview-card {
+        flex-direction: column-reverse;
+        margin: 80px;
+    }
+
+    .card-content {
+        width: 100%;
+        border-radius: 0 0 10px 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .card-title {
+        margin-top: 30px;
+    }
+
+    .card-title,
+    .stats-value {
+        font-size: min(2.8rem, 7.636vw);
+    }
+
+    .card-paragraph {
+        margin: 0 0 20px 0;   
+    }
+
+    .card-paragraph,
+    .stats-unit {
+        font-size: min(1.2rem, 4.5vw)
+    }
+
+    .stats-container {
+        margin: 0 0 30px 0;
+        flex-direction: column;
+        gap: 30px
+    }
+
+    .card-image {
+        width: 100%;
+        height: 300px;
+        border-radius: 10px 10px 0 0; 
+    }
+
+    .card-image::before {
+        border-radius: 10px 10px 0 0;
+    }
 }
