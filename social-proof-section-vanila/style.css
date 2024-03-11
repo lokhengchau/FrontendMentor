@@ -177,6 +177,10 @@ main {
 
 @media screen and (max-width: 925px) {
 
+    body {
+        background-image: url('./images/bg-pattern-top-mobile.svg'), url('./images/bg-pattern-bottom-mobile.svg');
+    }
+
     main {
         margin: 60px 0;
         width: min(600px, 100vw - 60px);
