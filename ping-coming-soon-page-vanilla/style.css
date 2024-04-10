@@ -81,17 +81,31 @@ input:focus {
   outline: 2px solid var(--very-dark-blue);
 }
 
-.input-error {
+input.error {
+  border-color: var(--light-red)
+}
+
+input.error:focus {
+  border-color: var(--light-red);
+  outline-color: var(--light-red);
+}
+
+.input-message {
   position: absolute;
   left: 27px;
   bottom: -30px;
-  color: var(--light-red);
   font-size: .8rem;
   display: none;
 }
 
-.input-error.shown {
+.input-message.shown-error {
   display: block;
+  color: var(--light-red);
+}
+
+.input-message.shown-success {
+  display: block;
+  color: var(--very-dark-blue);
 }
 
 button {
