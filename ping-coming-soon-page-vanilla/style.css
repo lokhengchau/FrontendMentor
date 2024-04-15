@@ -35,7 +35,9 @@ body {
 main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  margin: 0 20px;
+  gap: 30px;
   min-height: 100vh;
   align-items: center;
   padding-top: 40px;
@@ -95,16 +97,16 @@ input.error:focus {
   left: 27px;
   bottom: -30px;
   font-size: .8rem;
-  display: none;
+  visibility: hidden;
 }
 
 .input-message.shown-error {
-  display: block;
+  visibility: visible;
   color: var(--light-red);
 }
 
 .input-message.shown-success {
-  display: block;
+  visibility: visible;
   color: var(--very-dark-blue);
 }
 
@@ -127,7 +129,7 @@ button:hover {
 
 .dashboard-image {
   width: 650px;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .social-media-row {
@@ -175,4 +177,59 @@ svg {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 740px) {
+  html {
+    font-size: 16px;
+  }
+
+  main {
+    justify-content:flex-start
+  }
+
+  .logo-image {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 1.8rem;
+  }
+
+  form {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .form-email-field {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+
+  input,
+  button {
+    width: 80%;
+    padding: 15px 40px;
+    font-size: .9rem;
+  }
+
+  .input-message {
+    position: initial;
+  }
+
+  .dashboard-image {
+    margin: 50px 0;
+    width: calc(100vw - 40px);
+  }
+
+  .social-media-row {
+    margin-top: auto;
+  }
 }
